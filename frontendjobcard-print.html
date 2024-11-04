@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <title>Helpdesk Ticket System</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon"  href="dist/images0/sledgeico.ico"/>
+    <link rel="bookmark"  href="dist/images0/sledgeico.ico"/>    <!-- site css -->
+    <link rel="stylesheet" href="dist/css/site.min.css">
+    <link href="dist/css/styles.css" rel="stylesheet">
+    <link href="dist/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/datepicker.css" rel="stylesheet"><!-- date line -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css"/>   
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<!--   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/datepicker3.css" rel="stylesheet">
+  -->
+   <script src="dist/datatables/js/dataTables.bootstrap.min.js"></script>
+  </head>
+
+<body  class="main-page-bg" onload="javascript:window.print()">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+  <!-- Invoice Section -->
+        <div class="row">
+            <div class="col-md-12" >
+
+              <div class="row invoice-header">
+                <div class="col-md-10" >
+                   <label class="lead invoice-header-label">Job Card</label><br/>
+                   <div class="sub-companylogo"></div>
+                </div>
+                <div class="col-md-2" >
+                  <label class="lead invoice-header-date">Date: <span id="customercurrdate">15/06/2017</span></label>
+                </div>
+              </div><!-- row invoice-header -->
+
+
+              <div class="row invoice-row-mail-label">
+                <div class="col-md-4" >
+                   <label class="lead invoice-mail-label"><b>Sledge Enterprises Limited</b></label><br/>
+                   <label class="lead invoice-mail-label">Lavington, Valley Arcade
+Muthangari Rd , Kauria Close,Intrade Africa Place,Block C Ground Floor </label><br/>
+                   <label class="lead invoice-mail-label">Phone : <span>+254 738 424 152</span></label><br/>
+                   <label class="lead invoice-mail-label">Email : <span>support@sledgegroup.co.ke</span></label><br/>
+
+
+                </div>
+                <div class="col-md-4" >
+                   <label class="lead invoice-mail-label-toupper"><b><span id="customercompany">Customer Name</span></b></label><br/>
+                   <label class="lead invoice-mail-label-toupper"><span id="customeraddress">Address</span></label><br/>
+                   <label class="lead invoice-mail-label">Store : <span id="customerstore"></span></label><br/>
+                   <label class="lead invoice-mail-label">Phone : <span id="customerphone"></span></label><br/>
+                   <label class="lead invoice-mail-label">Email : <span id="customeremail"></span></label><br/>
+                </div>
+                <div class="col-md-4" >
+                  <label class="lead invoice-mail-label"><b>JOB NO #&nbsp;<span id="customerjobcardno">#007575</span></b></label><br/>
+                   <label class="lead invoice-mail-label">Job Done by : <span id="customerphone"></span></label><br/>
+                   <input type="text" class="form-control input-sm" placeholder="Technician" id="txt-technicianname">
+                </div>
+              </div><!-- row invoice-header -->
+
+
+                    <!-- Table row -->
+      <div class="row">
+        <div class="table-responsive">
+                   <table class="table" id="tablejobcard">
+                    <thead>
+                      <tr>
+                        <th>Class</th>
+                        <th>Item Name</th>
+                        <th>Serial No</th>
+                        <th>Fault Descrip</th>
+                        <th>Done</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listjobcard">
+             <!--          <tr>
+                        <td>Hp Printer</td>
+                        <td>10059</td>
+                        <td>Printer</td>
+                        <td>hp 100</td>
+                        <td><span class="fa fa-check">&nbsp;</span></td>
+                      </tr>  -->
+                    </tbody>
+
+                  </table>
+          </div><!-- /.table-responsive -->
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+            <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+          <p class="lead">Payment Methods:</p>
+
+
+          <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+          </p>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+          <p class="lead">Amount Due </p>
+
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th style="width:50%">Subtotal:</th>
+                <td><input type="text" class="form-control input-sm" placeholder="0.00" id="txt-subttotal"></td>
+              </tr>
+              <tr>
+                <th>Tax ()</th>
+                <td><input type="text" class="form-control input-sm" placeholder="0.00" id="txt-tax"></td>
+              </tr>
+              <tr>
+                <th>Shipping:</th>
+                <td><input type="text" class="form-control input-sm" placeholder="0.00" id="txt-shipping"></td>
+              </tr>
+              <tr>
+                <th>Total Cost:</th>
+                <td><input type="text" class="form-control input-sm" placeholder="0.00" id="txt-totalcost"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+       <div class="row">
+         <div class="col-md-12">
+           <label class="lead invoice-header-label">Job Certification</label>
+         </div>
+       </div><!-- /.row -->
+       <div class="row">
+         <div class="col-md-4">
+           <label class="">Name</label><input type="text" class="form-control input-sm" placeholder="Store manager" id="txt-storemngr">
+         </div>
+         <div class="col-md-4">
+           <label class="">Signature</label><input type="text" class="form-control input-sm" placeholder="Sign" id="txt-storesign">
+         </div>
+         <div class="col-md-4">
+           <label class="">Date</label><input type="text" class="form-control input-sm" placeholder="date"  id="txt-jobcarddate2">
+         </div>
+       </div><!-- /.row -->
+
+
+
+            </div><!-- col-md-12 main-->
+          </div><!-- row main-->
+        </div>
+<!-- Invoice Section -->
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!-- javascript -->
+    <script src="https://cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script>
+     <!-- <script type="text/javascript" src="dist/js/site.min.js"></script> -->
+     <script type="text/javascript" src="dist/js/supportjquery.js"></script>
+    <script src="dist/bootstrapjs/jquery-1.11.1.min.js"></script>
+    <script src="dist/bootstrapjs/bootstrap.min.js"></script>
+    <script src="dist/bootstrapjs/jquery.bootgrid.js"></script>
+    <script src="dist/bootstrapjs/bootstrap-datepicker.js"></script><!-- date line -->
+    <script src="dist/bootstrapjs/dataTables.min.js"></script>
+    <script src="dist/bootstrapjs/dataTables.bootstrap.min.js"></script>
+
+
+  
+<!-- javascript -->
+  </body>
+</html>

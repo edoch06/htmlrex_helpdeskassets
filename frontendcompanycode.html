@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <title>Helpdesk Ticket System</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon"  href="dist/images0/sledgeico.ico"/>
+    <link rel="bookmark"  href="dist/images0/sledgeico.ico"/>
+    <!-- site css -->
+    <link rel="stylesheet" href="dist/css/site.min.css">
+    <link href="dist/css/styles.css" rel="stylesheet">
+    <link href="dist/css/datepicker.css" rel="stylesheet"><!-- date line -->
+    <link rel="stylesheet" type="text/css" href="dist/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<!--   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/datepicker3.css" rel="stylesheet">
+  -->
+  </head>
+  <body class="body-nopadding ">
+
+
+  <!--sub-header-->
+     <div class="container-fluid main-subheader-bg ">
+        <div class="row">
+          <div class="col-md-5" >
+              <div class="col-md-1 logo-padding" >
+                <div class="sub-companylogo"></div>
+              </div>
+              <div class="col-md-11" >
+                <label class="lead lead-panel-subheader">Helpdesk Ticket System</label>
+              </div>
+          </div>
+        </div>
+     </div>
+     <!--sub-header-->
+
+
+ <!--nav-->
+    <nav role="navigation" class="navbar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button data-target="#bs-content-row-navbar-collapse-5" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand">Helpdesk Ticket System</span>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div id="bs-content-row-navbar-collapse-5" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+             <li class=""><a href="#">HOME</a></li>
+             <li class="activeli"><a href="#">SIGN UP</a></li>
+              <li class="/ItSupport/index.html"><a href="#">LOGIN</a></li>
+            </ul>
+
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    <!--header-->
+
+
+    <div class="container-fluid login-container">
+       <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4 job-filters">
+
+          <div class="row">
+              <div class="col-md-12 login-header">
+                  <label class="lead job-filter-header">Enter Company Code</label>
+              </div>
+          </div>
+          <div class="row login-row">
+              <div class="col-md-12">
+                   <label class="lead job-filter-filter">Code</label>
+                   <input type="text" class="form-control login-inputs" placeholder="Code" id="useremail" onkeypress="handle(event)">
+              </div>
+          </div>
+
+          <div class="row login-row">
+              <div class="col-md-12 signup-step-center">
+                <a href="/ItSupport/frontenddashboard.html"><button type="button" class="btn btn-md btn-red-gd btn-md btn-width" id="btnuserlogin"><small>Verify Code</small></button></a>
+              </div>
+          </div>
+          <div class="row login-row">
+                 <div class="col-md-5"></div>
+                 <div class="col-md-3">
+                   <div class="loader"></div>
+                 </div>
+                 <div class="col-md-4"></div>
+
+
+          </div>
+          <div class="row login-row">
+              <div class="col-md-12 signup-step-center">
+                <label>Registered ?&nbsp;&nbsp;<a href="/ItSupport/index.html" class="signup-link">Sign In</a></label>
+              </div>
+          </div>
+
+
+        </div>
+
+
+
+
+        <div class="col-md-4"></div>
+       </div>
+     </div>
+
+     <!--footer-->
+  <div class="site-footer main-footer-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="main-footer-font-color">Talk to us</h3>
+          <ul>
+            <li class="main-footer-font-color">Tweet us at <a href="https://twitter.com" target="_blank"><span class="list-normal">Twitter</span></a>&nbsp;&nbsp;&nbsp;&nbsp;Email us at <span class="list-normal">info@sledgegroup.co.ke</span></li>
+            <li>
+              <a title="Twitter" href="https://twitter.com" target="_blank" rel="external nofollow"><i class="icon list-normal" data-icon="&#xe121;"></i></a>
+              <a title="Facebook" href="https://www.facebook.com" target="_blank" rel="external nofollow"><i class="icon list-normal" data-icon="&#xe10b;"></i></a>
+              <a title="Google+" href="https://www.facebook.com/MyCareerIdentity/" target="_blank" rel="external nofollow"><i class="icon list-normal" data-icon="&#xe110;"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+           <h3 class="main-footer-font-color">Contact Us</h3>
+          <p class="main-footer-font-color">For more information get in touch with us on<br/> Phone:+254 738 424 152,+254 205 287 191.<br/> Email:info@sledgegroup.co.ke.</p>
+        </div>
+      </div>
+      <hr class="dashed" />
+      <div class="copyright clearfix">
+        <p class="main-footer-font-color">This site is supported by <a href="http://sledgegroup.co.ke/"  target="_blank"><span class="list-normal">Sledge Enterprises Limited</span></a> </p>
+      </div>
+    </div>
+  </div>
+<!--footer-->
+
+
+
+
+<!-- javascript -->
+    <script src="https://cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script>
+     <!-- <script type="text/javascript" src="dist/js/site.min.js"></script> -->
+     <script type="text/javascript" src="dist/js/internshipjquery.js"></script>
+    <script src="dist/bootstrapjs/jquery-1.11.1.min.js"></script>
+    <script src="dist/bootstrapjs/bootstrap.min.js"></script>
+    <script src="dist/bootstrapjs/bootstrap-datepicker.js"></script><!-- date line -->
+    <script type="text/javascript" src="dist/DataTables/datatables.min.js"></script>
+
+
+   
+<!-- javascript -->
+  </body>
+</html>
